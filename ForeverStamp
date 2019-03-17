@@ -1,6 +1,22 @@
 public class ForeverStamp {
-	public static void main(String [] args) {
-		java.util.Scanner sc = new java.util.Scanner(System.in);
-		double weight;
-	}
+    public static void main(String [] args) {
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+        double weight;
+        do {
+            System.out.print("Enter the weight in ounces for each letter to mail out." +
+                "\nWhen you are done entering, please enter -1 to finish: ");
+            weight = sc.nextDouble();
+
+            if(weight < 1.0 && weight != -1) {
+                System.out.println("You can use a forever stamp.");
+            }
+            else if(weight > 1.0 && weight != -1){
+                System.out.println("You need additional postage.");
+            }
+	    else{
+		System.out.println("Goodbye!");
+	    }
+        }while(weight != -1);
+        
+    }
 }
